@@ -6,8 +6,8 @@ class Movie < ApplicationRecord
   has_many :person_movies
   has_many :people, through: :person_movies
 
-  def actors
-    people.merge(PersonMovie.actors)
+  def casting
+    people.merge(PersonMovie.casting)
   end
 
   def directors
@@ -16,5 +16,9 @@ class Movie < ApplicationRecord
 
   def producers
     people.merge(PersonMovie.producers)
+  end
+
+  def roman_year
+    release_year.strftime('%Y').to_i.to_roman
   end
 end

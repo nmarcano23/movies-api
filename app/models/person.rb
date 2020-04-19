@@ -8,7 +8,7 @@ class Person < ApplicationRecord
   enum gender: %i[male female]
 
   def movies_as_actor
-    movies.merge(PersonMovie.actors)
+    movies.merge(PersonMovie.casting)
   end
 
   def movies_as_director

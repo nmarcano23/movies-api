@@ -25,6 +25,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
+# model serializer
+gem 'active_model_serializers'
+
 group :development, :test do
   # handles .env files to set environment variables
   gem 'dotenv-rails'
